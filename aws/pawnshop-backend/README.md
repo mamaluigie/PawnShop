@@ -19,9 +19,9 @@ First you will have to bootstrap the aws account.
 - Make sure that you verify with the command line in the .aws/config file your user credentials. 
   You can also do this through a command to update that instead of manually doing it.
 - Next make sure that the application is built and bootstrapped propperly<br>
-  ```aws bootstrap```
+  ```cdk bootstrap```
 - Now list all of the stacks that you would like to deploy or work with <br>
-  ```aws list```<br>
+  ```cdk list```<br>
 
   ```
      Stack1
@@ -29,7 +29,7 @@ First you will have to bootstrap the aws account.
      Stack3
      ```
 - Deploy the chosen stack that you want <br>
-  ```aws deploy <stack name>```
+  ```cdk deploy <stack name>```
 
 
 

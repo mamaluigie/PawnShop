@@ -14,7 +14,6 @@ export class VpcStack extends cdk.Stack {
 
       // Defining a new vpc for everything to lie in
       this.vpc = new ec2.Vpc(this, 'Vpc', {
-          availabilityZones: ["us-east-1"],
       });
       
   }
