@@ -1,9 +1,12 @@
-<mxfile host="Electron" modified="2024-06-22T19:07:40.538Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="7_ABvFj9sKrWp1qBIGUJ" version="24.6.1" type="device">
+<mxfile host="Electron" modified="2024-06-22T19:42:41.937Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="5yz-RvMOmTdVm9aD-aw6" version="24.6.1" type="device">
   <diagram name="Page-1" id="JUo80E58ZNVEpi5yQ0EZ">
-    <mxGraphModel dx="1637" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1637" dy="1606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-IUbiqaL9EEUALCf6ftK-2" target="-IUbiqaL9EEUALCf6ftK-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-2" value="Customer Account Information Database" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="590" y="210" width="72" height="81" as="geometry" />
         </mxCell>
@@ -13,16 +16,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-11" value="Pawn Transactions Table" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="280" y="210" width="72" height="81" as="geometry" />
+          <mxGeometry x="280" y="208.5" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-IUbiqaL9EEUALCf6ftK-12" target="-IUbiqaL9EEUALCf6ftK-23">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-12" value="Buy/Sell Transactions Table" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="280" y="340" width="72" height="81" as="geometry" />
+          <mxGeometry x="280" y="350.5" width="72" height="81" as="geometry" />
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-IUbiqaL9EEUALCf6ftK-2" target="-IUbiqaL9EEUALCf6ftK-12">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-14" value="These two tables will represent the pawn transactions and the buy/sell transactions for each customer.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The pawn transactions table will have transactions associated with each customer with an status attribute showing if it is an active or an inactive pawn currently.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Also other attributes for the pawn database will include&amp;nbsp;&lt;/div&gt;&lt;div&gt;Primary key: Customer Id Number&lt;/div&gt;&lt;div&gt;Secondary key: Transaction Type&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;interest,&amp;nbsp;&lt;/div&gt;&lt;div&gt;principle,&lt;/div&gt;&lt;div&gt;&amp;nbsp;original principle&lt;/div&gt;&lt;div&gt;, item category&lt;/div&gt;&lt;div&gt;, item description,&lt;/div&gt;&lt;div&gt;&amp;nbsp;item condition&lt;/div&gt;&lt;div&gt;, original transaction date&lt;/div&gt;&lt;div&gt;, most recent transaction date&lt;/div&gt;&lt;div&gt;, etc&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;-----&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-----&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;----&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;The buy/sell transaction table will be much more simple. All that will record are single one off transactions that occur which will be a buy or a sell associated with a specific customer id.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;the table attributes will be something like&lt;/div&gt;&lt;div&gt;&lt;div&gt;Secondary Key: transaction type&lt;/div&gt;&lt;div&gt;Primary Key: customer id number&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;transaction date&lt;/div&gt;&lt;div&gt;projected retail value for item&amp;nbsp;&lt;/div&gt;&lt;div&gt;item quality 1/5&lt;/div&gt;&lt;div&gt;item description&lt;/div&gt;&lt;div&gt;item category&lt;/div&gt;&lt;div&gt;item transaction amount&lt;/div&gt;&lt;div&gt;projected monthly earnings: can be calculated on a per item basis&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-425" y="250" width="560" height="30" as="geometry" />
+          <mxGeometry x="-670" y="219" width="560" height="30" as="geometry" />
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-IUbiqaL9EEUALCf6ftK-15" target="-IUbiqaL9EEUALCf6ftK-2">
           <mxGeometry relative="1" as="geometry" />
@@ -38,6 +44,18 @@
         </mxCell>
         <mxCell id="-IUbiqaL9EEUALCf6ftK-20" value="This one is mainly for testing purposes&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;the other one below will be for more of the functionality for the business for what it will need&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="940" y="240" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-21" value="&lt;font color=&quot;#ffffff&quot;&gt;Customer Pictures portraits&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="587" y="-30" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-23" value="&lt;font color=&quot;#ffffff&quot;&gt;Customer Pictures buy/sell&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="352" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-24" value="&lt;font color=&quot;#ffffff&quot;&gt;Customer Pictures Pawn&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="-IUbiqaL9EEUALCf6ftK-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="-IUbiqaL9EEUALCf6ftK-11" target="-IUbiqaL9EEUALCf6ftK-24">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
