@@ -13,7 +13,7 @@ awsAccounts.forEach(account => {
 
 
   const vpcStack = new VpcStack(app, 'VpcStack', {});
-  const databaseInfrastructureStack = new DatabaseInfrastructureStack(app, 'DatabaseInfrastructureStack'.concat(account.accountName), vpcStack.vpc, {});
+  const databaseInfrastructureStack = new DatabaseInfrastructureStack(app, 'DatabaseInfrastructureStack'.concat("-",account.accountName), vpcStack.vpc, {});
   // Check to see if account needs vpc or not
   if(account.vpc){
     databaseInfrastructureStack.addDependency(vpcStack);

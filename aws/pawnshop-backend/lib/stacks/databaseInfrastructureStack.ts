@@ -16,17 +16,22 @@ export class DatabaseInfrastructureStack extends cdk.Stack {
         // With doing like crud operations on it and specific queries and stuff
         // This function will be used to send various commands/flags to the lambda function with 
         // data attatched in order to interact with the database.
-        const crudFunction = new lambda.Function(this, 'CrudLambdaFunction', {
-          runtime: lambda.Runtime.PYTHON_3_12,
-          handler: 'CrudHandler.handler',
-          code: lambda.Code.fromAsset(path.join(__dirname, '../../assets/CrudHandler/')),
-        });
 
         // Creating the customer dynamo database
         const customerTable = new dynamodb.TableV2(this, 'CustomerTable', {
             partitionKey: { name: 'StoreIdNumber', type: dynamodb.AttributeType.STRING },
             pointInTimeRecovery: true,
-          });
+        });
+
+        const crudFunction = new lambda.Function(this, 'CrudLambdaFunction', {
+          runtime: lambda.Runtime.PYTHON_3_12,
+          handler: 'CrudHandler.handler',
+          code: lambda.Code.fromAsset(path.join(__dirname, '../../assets/CrudHandler/')),
+          environment: {
+            'DATABASE_NAME':customerTable.tableArn,
+          }
+        });
+
         // Grant permission for read and write for the crud lambda function
         customerTable.grantReadWriteData(crudFunction);
 
