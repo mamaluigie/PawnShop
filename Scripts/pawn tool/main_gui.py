@@ -37,20 +37,46 @@ class MainApplication(tk.Tk):
         # right_frame.grid(row=0, column=1)
         
         # Try strategy with two vertical boxes to build other boxes into
-        left_frame = tk.Frame(self, width = int(root_width // 4.1), height=int(root_height * 0.95))
-        left_frame.grid(row=0, column=0, padx=int(root_width * 0.005), pady=int(root_height * 0.005))
+        # left_frame = tk.Frame(self, width = int(root_width // 4.1), height=int(root_height * 0.95))
+        # left_frame.grid(row=0, column=0, padx=int(root_width * 0.005), pady=int(root_height * 0.005))
 
-        right_frame = tk.Frame(self, width = int(root_width * 0.7), height=int(root_height * 0.95))
-        right_frame.grid(row=0, column=1, padx=int(root_width * 0.005), pady=int(root_height * 0.005))
+        # right_frame = tk.Frame(self, width = int(root_width * 0.7), height=int(root_height * 0.95))
+        # right_frame.grid(row=0, column=1, padx=int(root_width * 0.005), pady=int(root_height * 0.005))
 
         
         # Right Frame info
-        self.info_box = InfoBox(right_frame, height=int(root_height * 0.9), width=int(root_width * 0.75))
+        # self.info_box = InfoBox(right_frame, height=int(root_height * 0.9), width=int(root_width * 0.75))
 
-        # Left Frame info
-        self.menu_box = MenuFrame(left_frame, height=int(root_height * 0.7), width=int(root_width // 4))
+        # # Left Frame info
+        # self.menu_box = MenuFrame(left_frame, height=int(root_height * 0.7), width=int(root_width // 4))
 
-        self.special_info_box = SpecialInfoBox(left_frame, height=int(root_height * 0.1), width=root_width // 4)
+        # self.special_info_box = SpecialInfoBox(left_frame, height=int(root_height * 0.1), width=root_width // 4)
+
+
+        # -------------------------------------------------------
+        # Going to try to do this with pack instead of grid since I think it can be easier
+        # With pack I need a big frame for everything, one frame on the left for the menu buttons and
+        # special information frames stacked ontop of eachother. And the right frame is going to be 
+        # The main one big.
+
+        # Need to pack these horizontally
+        left_frame = tk.Frame()
+        right_frame = tk.Frame()
+
+        # Need to pack these verticaly inside of the left frame
+        self.menu_box = tk.Frame(left_frame)
+        self.menu_box.pack()
+
+        self.special_info_box = tk.Frame(left_frame)
+        self.special_info_box.pack()
+
+        # Need to pack this in the right frame
+        self.info_box = tk.Frame(right_frame)
+        self.info_box.pack()
+
+        # pakcing the left and right frame into the root
+        left_frame.pack()
+        right_frame.pack()
 
     def update_info_box(frame, height, width):
         # self.info_box = frame(right_frame 
